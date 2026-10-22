@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+
+    options {
+        timestamps()
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+                echo 'Source code checked out from GitHub.'
+            }
+        }
+
+        stage('Validate Website Files') {
+            steps {
+                bat 'if exist index.html (echo index.html found) else (echo ERROR: index.html missing & exit /b 1)'
+                bat 'if exist style.css (echo style.css found) else (echo ERROR: style.css missing & exit /b 1)'
+                bat 'if exist script.js (echo script.js found) else (echo ERROR: script.js missing & exit /b 1)'
+            }
+        }
+
+        stage('Check Required Project Files') {
+            steps {
+                bat 'if exist README.md (echo README.md found) else (echo ERROR: README.md missing & exit /b 1)'
+                echo 'Basic website file checks passed.'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'SUCCESS: Smart Farming Learning Hub passed the Jenkins checks.'
+        }
+        failure {
+            echo 'FAILED: Check the Console Output for the missing file or error.'
+        }
+    }
+}

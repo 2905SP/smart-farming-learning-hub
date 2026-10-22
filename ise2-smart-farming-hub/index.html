@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student learning hub for smart farming, crop care, and simple garden planning.">
+  <title>Smart Farming Learning Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Smart Farming Learning Hub home"><span class="brand-icon">🌱</span> Smart Farming Hub</a>
+    <nav aria-label="Main navigation">
+      <a href="#learn">Learn</a><a href="#crops">Crop Guide</a><a href="#calculator">Seed Calculator</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch colour theme">🌙 Theme</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LEARN • GROW • SUSTAIN</p>
+        <h1>Small steps today.<br><span>Healthier crops tomorrow.</span></h1>
+        <p class="hero-text">A beginner-friendly guide to crop care and smarter farming. Explore plant tips and plan a small growing area.</p>
+        <a class="primary-button" href="#learn">Start learning <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a plant growing in soil"><div class="sun"></div><div class="plant">🌿</div><div class="soil"></div><span class="art-caption">Grow with knowledge</span></div>
+    </section>
+
+    <section id="learn" class="section intro-section">
+      <div class="section-heading"><p class="eyebrow">YOUR LEARNING SPACE</p><h2>Farming made easier</h2><p>Understand the basics before you plant.</p></div>
+      <div class="info-grid">
+        <article class="info-card"><div class="card-icon">💧</div><h3>Water wisely</h3><p>Check soil moisture before watering. Too much water can harm roots.</p></article>
+        <article class="info-card"><div class="card-icon">☀️</div><h3>Know the sunlight</h3><p>Choose a growing spot that suits the crop's sunlight needs.</p></article>
+        <article class="info-card"><div class="card-icon">🪴</div><h3>Build healthy soil</h3><p>Use suitable soil and compost, and avoid compacting the soil.</p></article>
+      </div>
+    </section>
+
+    <section id="crops" class="section crop-section">
+      <div class="section-heading section-heading-row"><div><p class="eyebrow">QUICK REFERENCE</p><h2>Explore crop care</h2><p>Choose a crop to see beginner tips.</p></div><label class="search-label" for="cropSearch">Search crops<input id="cropSearch" type="search" placeholder="Try tomato or spinach"></label></div>
+      <div id="cropGrid" class="crop-grid">
+        <article class="crop-card" data-crop="tomato"><div class="crop-emoji tomato-bg">🍅</div><div class="crop-content"><span class="crop-tag">FRUITING CROP</span><h3>Tomato</h3><p>Needs sunlight, steady moisture, and support as it grows.</p><button class="text-button crop-tip" data-tip="Tomato tip: Water near the soil in the morning and check leaves regularly for unusual spots.">View care tip →</button></div></article>
+        <article class="crop-card" data-crop="spinach"><div class="crop-emoji spinach-bg">🥬</div><div class="crop-content"><span class="crop-tag">LEAFY GREEN</span><h3>Spinach</h3><p>Grows well in fertile soil with regular, gentle watering.</p><button class="text-button crop-tip" data-tip="Spinach tip: Keep the soil evenly moist and harvest outer leaves carefully as they mature.">View care tip →</button></div></article>
+        <article class="crop-card" data-crop="chilli"><div class="crop-emoji chilli-bg">🌶️</div><div class="crop-content"><span class="crop-tag">VEGETABLE CROP</span><h3>Chilli</h3><p>Prefers warm conditions, sunlight, and well-drained soil.</p><button class="text-button crop-tip" data-tip="Chilli tip: Avoid waterlogging and inspect plants regularly for pests.">View care tip →</button></div></article>
+      </div>
+      <p id="noCrops" class="empty-state" hidden>No matching crops found. Try another search.</p>
+      <div id="tipMessage" class="tip-message" role="status" aria-live="polite">Select “View care tip” on a crop card to learn more.</div>
+    </section>
+
+    <section id="calculator" class="section calculator-section">
+      <div class="calculator-copy"><p class="eyebrow">PLAN YOUR GARDEN</p><h2>Simple seed-space calculator</h2><p>Estimate how many plants can fit in a small growing area. This is a basic planning estimate, not a crop-specific recommendation.</p></div>
+      <form id="seedForm" class="calculator-card">
+        <label for="areaLength">Growing area length (metres)<input id="areaLength" type="number" min="0.1" step="0.1" value="3" required></label>
+        <label for="areaWidth">Growing area width (metres)<input id="areaWidth" type="number" min="0.1" step="0.1" value="2" required></label>
+        <label for="plantSpace">Space per plant (metres²)<input id="plantSpace" type="number" min="0.01" step="0.01" value="0.25" required></label>
+        <button class="primary-button full-button" type="submit">Calculate plants</button>
+        <output id="plantResult" class="result" aria-live="polite">Estimated plants: 24</output>
+      </form>
+    </section>
+    <section class="notice"><strong>Learning note:</strong> Crop needs vary by variety, climate, soil, and local conditions. Use these tips as general learning guidance and consult local agricultural experts for disease diagnosis or treatment.</section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home">🌱 Smart Farming Hub</a><p>Student mini-project • DevOps and Kubernetes ISE–2</p><p>Built with HTML, CSS, JavaScript, Git, GitHub, and Jenkins.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
