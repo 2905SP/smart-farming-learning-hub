@@ -16,13 +16,28 @@ themeToggle.addEventListener('click', function () {
 cropSearch.addEventListener('input', function () {
   const searchText = cropSearch.value.trim().toLowerCase();
   let visibleCount = 0;
+
   cropCards.forEach(function (card) {
-    const matches = card.dataset.crop.includes(searchText) || card.textContent.toLowerCase().includes(searchText);
+    const cropName = card.querySelector('h3').textContent.toLowerCase();
+    const cropCategory = card.querySelector('.crop-tag').textContent.toLowerCase();
+    const cropDescription = card.querySelector('.crop-content').textContent.toLowerCase();
+
+    const matches =
+      cropName.includes(searchText) ||
+      cropCategory.includes(searchText) ||
+      cropDescription.includes(searchText);
+
     card.hidden = !matches;
-    if (matches) visibleCount++;
+
+    if (matches) {
+      visibleCount++;
+    }
   });
+
   noCrops.hidden = visibleCount !== 0;
 });
+
+
 
 document.querySelectorAll('.crop-tip').forEach(function (button) {
   button.addEventListener('click', function () {
