@@ -47,13 +47,33 @@ document.querySelectorAll('.crop-tip').forEach(function (button) {
 
 seedForm.addEventListener('submit', function (event) {
   event.preventDefault();
+
   const length = Number(document.getElementById('areaLength').value);
   const width = Number(document.getElementById('areaWidth').value);
   const space = Number(document.getElementById('plantSpace').value);
-  if (length <= 0 || width <= 0 || space <= 0) {
-    plantResult.textContent = 'Please enter values greater than zero.';
+
+  if (
+    document.getElementById('areaLength').value.trim() === '' ||
+    document.getElementById('areaWidth').value.trim() === '' ||
+    document.getElementById('plantSpace').value.trim() === '' ||
+    !Number.isFinite(length) ||
+    !Number.isFinite(width) ||
+    !Number.isFinite(space) ||
+    length <= 0 ||
+    width <= 0 ||
+    space <= 0
+  ) {
+    plantResult.textContent =
+      'Invalid input. Please enter valid numbers greater than zero.';
     return;
   }
-  const estimate = Math.floor((length * width) / space);
-  plantResult.textContent = 'Estimated plants: ' + estimate + ' (' + (length * width).toFixed(2) + ' m² growing area)';
+
+  const area = length * width;
+  const estimate = Math.floor(area / space);
+
+  plantResult.textContent =
+    'Estimated plants: ' + estimate +
+    ' (' + area.toFixed(2) + ' m² growing area)';
 });
+
+
