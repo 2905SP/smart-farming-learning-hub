@@ -20,5 +20,22 @@ button:active {
 }
 
 
+/* Change 5: Improve keyboard accessibility */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #236b45;
+    outline-offset: 4px;
+}
+
+/* Make keyboard focus easier to see */
+button:focus-visible,
+a:focus-visible {
+    border-radius: 4px;
+}
+
+
+
 
 
