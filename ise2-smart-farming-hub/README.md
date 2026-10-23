@@ -33,17 +33,17 @@ No backend server or API key is required for the website.
 
 ## 5. Changes Made and Commit Details
 
-Record your own real commit hashes and dates after completing each change. Do not copy sample hashes from another project.
+The following five meaningful website changes were committed separately using Git and pushed to GitHub.
 
-| Commit | Suggested commit message | Change to implement and verify |
-|---|---|---|
-| 1 | `Initial website structure` | Add the initial HTML page and basic project structure. |
-| 2 | `Add responsive styling` | Add CSS layout, navigation, colour palette, and mobile styling. |
-| 3 | `Add crop guide cards and search` | Add crop cards, care-tip interactions, and crop search. |
-| 4 | `Add seed-space calculator and theme toggle` | Add plant estimate calculation and light/dark theme switch. |
-| 5 | `Add Jenkins pipeline and project documentation` | Add `Jenkinsfile`, improve README, and document verification. |
+| No. | Commit Hash | Commit Message | Description |
+|---:|---|---|---|
+| 1 | `4d2852b` | Add potato crop information | Added a Potato crop card with crop-care information and a care-tip button. |
+| 2 | `f4df3f3` | Improve button hover effects | Added hover animations and visual feedback for buttons. |
+| 3 | `7bcec59` | Improve crop search functionality | Improved search to filter crops by name, category, and description. |
+| 4 | `70d7718` | Improve seed calculator input validation | Added validation for empty, invalid, non-finite, zero, and negative inputs. |
+| 5 | `ca26aa5` | Improve keyboard accessibility | Added visible keyboard-focus indicators for buttons, links, and input fields. |
 
-If you started by committing all final files together, do not pretend the later commits happened earlier. Make further meaningful improvements in separate commits and document the actual history shown by `git log`.
+The initial project commit is `446447e` (`Initial website project`). The commit hashes above are short hashes from this project's Git history.
 
 ## 6. Git and GitHub Workflow
 
@@ -54,7 +54,7 @@ git init
 git add .
 git commit -m "Initial website structure"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git remote add origin https://github.com/2905SP/smart-farming-learning-hub.git
 git push -u origin main
 ```
 
@@ -71,7 +71,7 @@ Replace the sample remote URL with your own GitHub repository URL. Never put pas
 
 ## 7. Jenkins Integration
 
-This repository includes a `Jenkinsfile` for a basic Jenkins Pipeline. It checks out the configured Git repository and verifies that `index.html`, `style.css`, `script.js`, and `README.md` exist. It is a basic file-validation CI job; it does not deploy the site to a public hosting service.
+This repository includes a `Jenkinsfile` for a basic Jenkins Pipeline. It checks out the configured Git repository and verifies that the website files (`index.html`, `style.css`, and `script.js`) and project documentation (`README.md` and `Jenkinsfile`) exist in the `ise2-smart-farming-hub` folder. It is a basic file-validation CI job; it does not deploy the site to a public hosting service.
 
 ### Setup and execution
 
@@ -82,7 +82,7 @@ This repository includes a `Jenkinsfile` for a basic Jenkins Pipeline. It checks
 5. In Jenkins, select **New Item**, enter a job name such as `smart-farming-hub-ci`, select **Pipeline**, and press **OK**.
 6. In the job configuration, find **Pipeline**. Select **Pipeline script from SCM**.
 7. Choose **Git** as SCM, enter your GitHub repository URL, and set the branch to `*/main` (adjust if your branch has a different name).
-8. Set **Script Path** to `Jenkinsfile`, save the job, and click **Build Now**.
+8. Set **Script Path** to `ise2-smart-farming-hub/Jenkinsfile`, save the job, and click **Build Now**.
 9. Open the build number and then **Console Output**. Confirm that the file checks pass and the build finishes with `Finished: SUCCESS`.
 10. If the repository is private, configure Jenkins credentials securely. Do not paste tokens into the repository or screenshots.
 
@@ -92,25 +92,60 @@ Official guide: https://www.jenkins.io/doc/book/installing/windows/
 
 ## 8. Screenshots and Evidence
 
-Create a folder named `screenshots` in the repository and add your own screenshots. Use clear filenames and captions. Take genuine screenshots from your own work; do not use fabricated or copied evidence.
+The following genuine screenshots document the working website, GitHub repository, Git commit history, the five website improvements, and Jenkins integration. Save these image files in the `screenshots` folder alongside this README.
 
-| Screenshot file | What it must show |
+| Screenshot file | Evidence shown |
 |---|---|
-| `screenshots/01-website-home.png` | Website homepage open in your browser |
-| `screenshots/02-crop-guide.png` | Crop cards and crop search/care-tip feature |
-| `screenshots/03-calculator.png` | Calculator with an example result |
-| `screenshots/04-github-repository.png` | Your GitHub repository page and project files |
-| `screenshots/05-git-commits.png` | Terminal output of `git log --oneline` showing your commits |
-| `screenshots/06-jenkins-job.png` | Jenkins pipeline job/build page |
-| `screenshots/07-jenkins-console.png` | Console Output showing successful file checks and build result |
+| `screenshots/01-website-home.png` | Smart Farming Learning Hub homepage. |
+| `screenshots/02-website-home-2.png` | Crop guide page with crop cards. |
+| `screenshots/03-website-home-3.png` | Seed-space calculator with an example result. |
+| `screenshots/04-github-repository.png` | GitHub repository page. |
+| `screenshots/05-git-commits.png` | Terminal showing the Git commit history. |
+| `screenshots/06-potato-crop.png` | Potato crop card added in the first improvement. |
+| `screenshots/07-button-styling.png` | Website view for the button styling improvement. |
+| `screenshots/08-crop-search.png` | Crop search filtering the crop cards. |
+| `screenshots/09-calculator-validation.png` | Seed calculator input-validation evidence. |
+| `screenshots/10-accessibility-update.png` | Website view associated with the keyboard-accessibility improvement. |
+| `screenshots/11-jenkins-build.png` | Jenkins dashboard and build history. |
+| `screenshots/12-jenkins-console.png` | Jenkins Console Output for the pipeline run. |
 
-After taking the screenshots, add them to this repository and link them here, for example:
+### 8.1 Website Homepage
 
-```markdown
-![Website homepage](screenshots/01-website-home.png)
+![Smart Farming Learning Hub homepage](screenshots/01-website-home.png)
+
+### 8.2 Crop Guide
+
+![Crop guide page](screenshots/02-website-home-2.png)
+
+### 8.3 Seed-Space Calculator
+
+![Seed-space calculator](screenshots/03-website-home-3.png)
+
+### 8.4 GitHub Repository
+
+![GitHub repository](screenshots/04-github-repository.png)
+
+### 8.5 Git Commit History
+
 ![Git commit history](screenshots/05-git-commits.png)
-![Jenkins successful console output](screenshots/07-jenkins-console.png)
-```
+
+### 8.6 Website Improvements
+
+![Potato crop information](screenshots/06-potato-crop.png)
+
+![Website button styling improvement](screenshots/07-button-styling.png)
+
+![Crop search](screenshots/08-crop-search.png)
+
+![Seed calculator validation](screenshots/09-calculator-validation.png)
+
+![Website view associated with the accessibility improvement](screenshots/10-accessibility-update.png)
+
+### 8.7 Jenkins Integration
+
+![Jenkins dashboard and build history](screenshots/11-jenkins-build.png)
+
+![Jenkins Console Output](screenshots/12-jenkins-console.png)
 
 ## 9. Testing Checklist
 
@@ -131,8 +166,9 @@ This practical demonstrates a basic website development workflow, source-code ve
 
 ## Repository Details
 
-- Student name: [Enter your name]
-- Class/Branch: [Enter your class and branch]
+- Student name: Samruddhi Nandkishor Patil
+- Class/Branch: AI and Machine Learning Engineering
 - Subject: DevOps and Kubernetes
-- GitHub repository: [Paste your repository URL]
-- Jenkins job: `smart-farming-hub-ci` (or your actual job name)
+- GitHub repository: https://github.com/2905SP/smart-farming-learning-hub
+- Git commit history: https://github.com/2905SP/smart-farming-learning-hub/commits/main/
+- Jenkins job: `smart-farming-hub-ci`
