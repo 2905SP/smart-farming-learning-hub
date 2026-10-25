@@ -96,56 +96,56 @@ The following genuine screenshots document the working website, GitHub repositor
 
 | Screenshot file | Evidence shown |
 |---|---|
-| `screenshots/01-website-home.png` | Smart Farming Learning Hub homepage. |
-| `screenshots/02-website-home-2.png` | Crop guide page with crop cards. |
-| `screenshots/03-website-home-3.png` | Seed-space calculator with an example result. |
-| `screenshots/04-github-repository.png` | GitHub repository page. |
-| `screenshots/05-git-commits.png` | Terminal showing the Git commit history. |
-| `screenshots/06-potato-crop.png` | Potato crop card added in the first improvement. |
-| `screenshots/07-button-styling.png` | Website view for the button styling improvement. |
-| `screenshots/08-crop-search.png` | Crop search filtering the crop cards. |
-| `screenshots/09-calculator-validation.png` | Seed calculator input-validation evidence. |
-| `screenshots/10-accessibility-update.png` | Website view associated with the keyboard-accessibility improvement. |
-| `screenshots/11-jenkins-build.png` | Jenkins dashboard and build history. |
-| `screenshots/12-jenkins-console.png` | Jenkins Console Output for the pipeline run. |
+| `screenshots/website-homepage1.png` | Smart Farming Learning Hub homepage. |
+| `screenshots/website-homepage2.png` | Crop guide page with crop cards. |
+| `screenshots/website-homepage3.png` | Seed-space calculator with an example result. |
+| `screenshots/Git-repository.png` | GitHub repository page. |
+| `screenshots/Git-commite.png` | Terminal showing the Git commit history. |
+| `screenshots/Website-Change1.png` | Potato crop card added in the first improvement. |
+| `screenshots/Website-Change2.png` | Website view for the button styling improvement. |
+| `screenshots/Website-Change3.png` | Crop search filtering the crop cards. |
+| `screenshots/Website-Chamge4.png` | Seed calculator input-validation evidence. |
+| `screenshots/Website-Change5.png` | Website view associated with the keyboard-accessibility improvement. |
+| `screenshots/Jenkins.png` | Jenkins dashboard and build history. |
+| `screenshots/Jenkis_console_OutPut.png` | Jenkins Console Output for the pipeline run. |
 
 ### 8.1 Website Homepage
 
-![Smart Farming Learning Hub homepage](screenshots/01-website-home.png)
+![Smart Farming Learning Hub homepage](screenshots/website-homepage1.png)
 
 ### 8.2 Crop Guide
 
-![Crop guide page](screenshots/02-website-home-2.png)
+![Crop guide page](screenshots/website-homepage2.png)
 
 ### 8.3 Seed-Space Calculator
 
-![Seed-space calculator](screenshots/03-website-home-3.png)
+![Seed-space calculator](screenshots/website-homepage3.png)
 
 ### 8.4 GitHub Repository
 
-![GitHub repository](screenshots/04-github-repository.png)
+![GitHub repository](screenshots/Git-repository.png)
 
 ### 8.5 Git Commit History
 
-![Git commit history](screenshots/05-git-commits.png)
+![Git commit history](screenshots/Git-commite.png)
 
 ### 8.6 Website Improvements
 
-![Potato crop information](screenshots/06-potato-crop.png)
+![Potato crop information](screenshots/Website-Change1.png)
 
-![Website button styling improvement](screenshots/07-button-styling.png)
+![Website button styling improvement](screenshots/Website-Change2.png)
 
-![Crop search](screenshots/08-crop-search.png)
+![Crop search](screenshots/Website-Change3.png)
 
-![Seed calculator validation](screenshots/09-calculator-validation.png)
+![Seed calculator validation](screenshots/Website-Chamge4.png)
 
-![Website view associated with the accessibility improvement](screenshots/10-accessibility-update.png)
+![Website view associated with the accessibility improvement](screenshots/Website-Change5.png)
 
 ### 8.7 Jenkins Integration
 
-![Jenkins dashboard and build history](screenshots/11-jenkins-build.png)
+![Jenkins dashboard and build history](screenshots/Jenkins.png)
 
-![Jenkins Console Output](screenshots/12-jenkins-console.png)
+![Jenkins Console Output](screenshots/Jenkis_console_OutPut.png)
 
 ## 9. Testing Checklist
 
